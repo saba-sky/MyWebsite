@@ -1,0 +1,87 @@
+body {
+  background-color: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  line-height: 1.4;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  gap: 1px 1px;
+  grid-template-areas: "header header header" "nav nav nav" ". branding ." ". cards ." ". . ." "footer footer footer";
+}
+.header {
+  background-attachment: fixed;
+  background-image: url("../img/header.png");
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  justify-content: flex-start;
+  min-height: 400px;
+  max-width: 100%;
+  background-size: cover;
+  grid-area: header;
+}
+.nav {
+  padding-right: 10%;
+  grid-area: nav;
+  text-transform: uppercase;
+}
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+  margin-right: 1em;
+}
+.btn {
+  padding: 0.5rem 2rem;
+  border: 1px #ccc solid;
+  display: inline-block;
+  margin: 2rem 0 0;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #333;
+  transition: background 500ms ease;
+}
+.btn:hover {
+  background: #f4f4f4;
+}
+.row {
+  display: inline-flex;
+  justify-content: center;
+}
+
+.row::after,
+.row::before {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+}
+
+label {
+  margin: 0 40px 0 0;
+  font-size: 26px;
+  line-height: 70px;
+  display: none;
+}
+#toggle {
+  display: none;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:#137d74;
+  color: #333;
+  text-align: center;
+
+  grid-area: footer;
+}
